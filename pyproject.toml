@@ -1,0 +1,29 @@
+[project]
+name = "movie-booking-system"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Prajwal Dahal", email = "prajwal@saransa.net" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi[standard]>=0.162.0",
+]
+
+[project.scripts]
+movie-booking-system = "movie_booking_system:main"
+
+[build-system]
+requires = ["uv_build>=0.13.6,<0.14.0"]
+build-backend = "uv_build"
+
+[tool.fastapi]
+entrypoint = "movie_booking_system.main:app"
+
+[dependency-groups]
+dev = [
+    "httpx>=0.28.1",
+    "pytest>=9.2.0",
+    "ruff>=0.17.3",
+]
