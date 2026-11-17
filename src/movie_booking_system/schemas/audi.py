@@ -7,7 +7,7 @@ from .cinema import CinemaRead
 from .seat import SeatSection
 
 
-MAX_ROWS = 26 * 27  # labels A..ZZ, because Seat.row_label is String(2)
+MAX_ROWS = 26 * 27 
 
 
 class AudiBase(BaseModel):
